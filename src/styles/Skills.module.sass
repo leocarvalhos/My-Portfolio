@@ -1,0 +1,47 @@
+@use "./mixin"
+@use "./variables"
+
+.skills
+    width: 100vw
+
+    .title
+        width: 100%
+        @include mixin.flex(column, center, center)
+        margin-top: 20px
+
+        h1
+            font-size: 3.4rem
+            margin-bottom: 25px
+            color: variables.$medium-purple
+
+        p
+            font-size: 1.8rem
+            margin-bottom: 40px
+            color: variables.$medium-purple
+
+    .frameworks
+        width: 100%
+        @include mixin.flex(row, center, center)
+
+        div
+            @include mixin.flex(row, center, center)
+            width: 50%
+            flex-wrap: wrap
+            gap: 25px
+
+            .organization
+                width: 200px
+                height: 200px
+                border: 1px solid black
+                @include mixin.flex(column, center, center)
+                transition: .5s
+                border-radius: 10%
+
+                span
+                    font-size: 2rem
+                    color: variables.$color-default
+                    font-weight: bold
+
+            .organization:hover
+                transform: scale(1.1)
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5)

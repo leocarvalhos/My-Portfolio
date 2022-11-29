@@ -1,0 +1,14 @@
+@use "./variables"
+@use "./mixin"
+
+.projects
+    width: 100vw
+    height: 93vh
+    background: variables.$medium-purple
+    @include mixin.flex(row, center, center)
+    border-top-left-radius: 80px
+    border-top-right-radius: 80px
+
+    h1
+        color: #fff
+        font-size: 5rem

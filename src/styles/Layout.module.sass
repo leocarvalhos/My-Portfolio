@@ -1,0 +1,48 @@
+@use "../styles/mixin"
+@use "../styles/variables"
+
+.layout
+    width: 100vw
+    height: 93vh
+
+    .introduction
+        @include mixin.flex(column, flex-start, center)
+        width: 100%
+        padding-top: 50px
+
+        .img
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+            margin-bottom: 30px
+
+        h1
+            margin-bottom: 25px
+            font-size: 3.2rem
+
+        span
+            font-size: 1.8rem
+            color: rgb(130, 129, 129)
+            margin-bottom: 40px
+
+        p
+            font-size: 1.6rem
+            width: 40%
+            margin-bottom: 100px
+
+    .skills
+        width: 100%
+        display: flex
+        justify-content: space-around
+
+        div
+            height: 110px
+            width: 110px
+            transition: .6s
+            cursor: pointer
+            color: variables.$color-default
+
+            span
+                font-size: 2.3rem
+                margin-top: 5px
+
+        div:hover
+            transform: scale(1.1)

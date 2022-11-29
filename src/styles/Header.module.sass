@@ -1,0 +1,23 @@
+@use "./mixin"
+@use "./variables"
+
+.header
+    width: 100vw
+    height: 7vh
+    @include mixin.flex(row, center, flex-start)
+    gap: 40px
+
+    strong
+        font-size: 2rem
+        padding: 0px 30px 8px 30px
+        color: variables.$medium-purple
+        cursor: pointer
+        transition: .8s
+        border-end-start-radius: 15px
+        border-end-end-radius: 15px
+
+    strong:hover
+        background: variables.$color-default
+        color: #fff
+        border-end-start-radius: 15px
+        border-end-end-radius: 15px
